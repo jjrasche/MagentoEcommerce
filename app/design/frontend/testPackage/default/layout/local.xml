@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<layout>
+  <default>
+    <remove name="paypal.partner.right.logo" />
+    <remove name="right.permanent.callout" />
+    <reference name="right">
+      <remove name="right.poll" />
+      <block type="poll/activePoll" name="right.poll">
+        <action method="setPollTemplate"><template>poll/active.phtml</template><type>poll</type></action>
+        <action method="setPollTemplate"><template>poll/result.phtml</template><type>results</type></action>
+      </block>
+    </reference>
+  </default>
+</layout>
+<!--
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <remove name="paypal.partner.right.logo" />
+        <remove name="right.permanent.callout" />
+        <remove name="right.poll"/> 
+            <reference name="right">
+          <remove name="right.poll" />
+          <block type="poll/activePoll" before="cart_sidebar">
+            <action method="setPollTemplate"><template>poll/active.phtml</template><type>poll</type></action>
+            <action method="setPollTemplate"><template>poll/result.phtml</template><type>results</type></action>
+          </block>
+        </reference>
+</layout>-->
